@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 14" name="dsCoAd">
+  <DataContextMoniker Name="/dsCoAdDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f0911187-18a8-4f64-b018-55803cec154c" absoluteBounds="3.5, 1.625, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/dsCoAdDataContext/ClientDeviceGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee25be69-0bd1-45d4-8c94-6228a0d705c1" absoluteBounds="3.5150000005960464, 2.0850000008940697, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8eed441c-9f1e-485d-998b-8a957c32bca7" absoluteBounds="3.5, 11.375, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/dsCoAdDataContext/TypeParams" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b55c5311-c49e-4a05-aa92-6f37f28681eb" absoluteBounds="3.5150000005960464, 11.83500000089407, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="80fe9725-8a6f-4b1a-81df-1901de577e59" absoluteBounds="0.75, 5.125, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/dsCoAdDataContext/ClientServers" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ae79ef2-2b0e-4652-84f0-c8e22572a8d2" absoluteBounds="0.76500000059604645, 5.58500000089407, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="27ad1cb0-e4be-49f7-9f5e-d376235ebd99" absoluteBounds="3.5, 4.375, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/dsCoAdDataContext/ClientStores" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e7edd0dd-df5b-4631-a066-e1028e14283e" absoluteBounds="3.5150000005960464, 4.83500000089407, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="87f65fa7-61ec-4021-b851-1434d0818f4f" absoluteBounds="6.25, 10.5, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/dsCoAdDataContext/DeviceEvent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="492aefee-a1bc-43f8-aa34-346514ca99b7" absoluteBounds="6.265, 10.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6c561634-37d7-43ff-aed6-b589d032e9b3" absoluteBounds="6.75, 4.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/dsCoAdDataContext/DeviceGroupDependency" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b90df2b-cc4c-443f-9b67-6dcc85c86823" absoluteBounds="6.7650000000000006, 5.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9a1b75f8-3856-424f-8b54-e275880c3e3f" absoluteBounds="6.25, 1.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/dsCoAdDataContext/DeviceGroupParams" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1c1ea122-1c31-4e3f-81dc-0a3fd1bb4669" absoluteBounds="6.2650000005960464, 2.2100000008940697, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3d62f50a-ba55-4dfa-9f1c-b1751c2bb706" absoluteBounds="6.25, 8.375, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/dsCoAdDataContext/DeviceParams" />
+      <nestedChildShapes>
+        <elementListCompartment Id="86949b37-3f7c-41e5-8c1d-cf22d94d085e" absoluteBounds="6.265, 8.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 5.125); (1.75 : 2.60659912109375); (3.5 : 2.60659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dsCoAdDataContext/ClientServers/ClientServers_ClientDeviceGroup" />
+      <nodes>
+        <classShapeMoniker Id="80fe9725-8a6f-4b1a-81df-1901de577e59" />
+        <classShapeMoniker Id="f0911187-18a8-4f64-b018-55803cec154c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.01044840494792); (3.04166416666667 : 6.01044840494792 : JumpStart); (3.20833083333333 : 6.01044840494792 : JumpEnd); (3.5 : 6.01044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dsCoAdDataContext/ClientServers/ClientServers_ClientStores" />
+      <nodes>
+        <classShapeMoniker Id="80fe9725-8a6f-4b1a-81df-1901de577e59" />
+        <classShapeMoniker Id="27ad1cb0-e4be-49f7-9f5e-d376235ebd99" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 11.4703836153846); (6.0625 : 10.9078836153846); (6.0625 : 2.63544840494792); (6.25 : 2.63544840494792)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dsCoAdDataContext/TypeParams/TypeParams_DeviceGroupParams" />
+      <nodes>
+        <classShapeMoniker Id="8eed441c-9f1e-485d-998b-8a957c32bca7" />
+        <classShapeMoniker Id="9a1b75f8-3856-424f-8b54-e275880c3e3f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.13022420265401); (6.25 : 2.13022420265401)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dsCoAdDataContext/ClientDeviceGroup/ClientDeviceGroup_DeviceGroupParams" />
+      <nodes>
+        <classShapeMoniker Id="f0911187-18a8-4f64-b018-55803cec154c" />
+        <classShapeMoniker Id="9a1b75f8-3856-424f-8b54-e275880c3e3f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.46769230769231 : 11.375); (5.875 : 10.9676923076923); (5.875 : 9.06814697265625); (5.97916666666667 : 9.06814697265625 : JumpStart); (6.14583333333333 : 9.06814697265625 : JumpEnd); (6.25 : 9.06814697265625)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dsCoAdDataContext/TypeParams/TypeParams_DeviceParams" />
+      <nodes>
+        <classShapeMoniker Id="8eed441c-9f1e-485d-998b-8a957c32bca7" />
+        <classShapeMoniker Id="3d62f50a-ba55-4dfa-9f1c-b1751c2bb706" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e18c6e56-f0a6-440d-96d1-762ff2bbb1a5" absoluteBounds="2.625, 8.125, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/dsCoAdDataContext/ClientDevices" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b8f2e656-1246-4c8c-83b3-b718cea1d112" absoluteBounds="2.64, 8.585, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.625 : 10.7748527018229); (5.79166666666667 : 10.7748527018229 : JumpStart); (5.95833333333333 : 10.7748527018229 : JumpEnd); (5.97916666666667 : 10.7748527018229 : JumpStart); (6.14583333333333 : 10.7748527018229 : JumpEnd); (6.25 : 10.7748527018229)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dsCoAdDataContext/ClientDevices/ClientDevices_DeviceEvent" />
+      <nodes>
+        <classShapeMoniker Id="e18c6e56-f0a6-440d-96d1-762ff2bbb1a5" />
+        <classShapeMoniker Id="87f65fa7-61ec-4021-b851-1434d0818f4f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.625 : 8.65907348632813); (5.97916666666667 : 8.65907348632813 : JumpStart); (6.14583333333333 : 8.65907348632813 : JumpEnd); (6.25 : 8.65907348632813)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dsCoAdDataContext/ClientDevices/ClientDevices_DeviceParams" />
+      <nodes>
+        <classShapeMoniker Id="e18c6e56-f0a6-440d-96d1-762ff2bbb1a5" />
+        <classShapeMoniker Id="3d62f50a-ba55-4dfa-9f1c-b1751c2bb706" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.6874995 : 6.89589680989583); (1.6874995 : 9.58735270182292); (2.625 : 9.58735270182292)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dsCoAdDataContext/ClientServers/ClientServers_ClientDevices" />
+      <nodes>
+        <classShapeMoniker Id="80fe9725-8a6f-4b1a-81df-1901de577e59" />
+        <classShapeMoniker Id="e18c6e56-f0a6-440d-96d1-762ff2bbb1a5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 3.12865118164063); (3.1249975 : 3.12865118164063); (3.1249975 : 8.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dsCoAdDataContext/ClientDeviceGroup/ClientDeviceGroup_ClientDevices" />
+      <nodes>
+        <classShapeMoniker Id="f0911187-18a8-4f64-b018-55803cec154c" />
+        <classShapeMoniker Id="e18c6e56-f0a6-440d-96d1-762ff2bbb1a5" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.375, 9.875" name="Coad">
+  <DataContextMoniker Name="/CoadDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ba0f3274-74a4-4287-bc6d-391aefe165f6" absoluteBounds="2.125, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/CoadDataContext/TypeParam" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0232bb03-a9f2-4187-a252-43042f1f953c" absoluteBounds="2.14, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3b350c52-9bfa-420a-a513-49b6e0ce866e" absoluteBounds="7.125, 0.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CoadDataContext/DeviceGroupParam" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c369a611-d3af-4ecf-85b3-c9408afd3e03" absoluteBounds="7.14, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.125 : 1.76044840494792); (7.125 : 1.76044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CoadDataContext/TypeParam/TypeParam_DeviceGroupParam" />
+      <nodes>
+        <classShapeMoniker Id="ba0f3274-74a4-4287-bc6d-391aefe165f6" />
+        <classShapeMoniker Id="3b350c52-9bfa-420a-a513-49b6e0ce866e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3333efb2-b6e9-4ad4-9350-f786e59427f1" absoluteBounds="4, 7.125, 2, 2.5401025390625">
+      <DataClassMoniker Name="/CoadDataContext/ClientStore" />
+      <nestedChildShapes>
+        <elementListCompartment Id="116de504-eebe-4b02-a164-970e96782432" absoluteBounds="4.0150000000000006, 7.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="db7159d7-7475-404d-bf33-e3265b6d0712" absoluteBounds="7.5, 3.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CoadDataContext/ClientServer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4a7ee183-7ddc-4332-8dcf-528e5c6fdfb7" absoluteBounds="7.515, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.40625 : 5.52089680989583); (8.40625 : 8.83579752604167); (6 : 8.83579752604167)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CoadDataContext/ClientServer/ClientServer_ClientStore" />
+      <nodes>
+        <classShapeMoniker Id="db7159d7-7475-404d-bf33-e3265b6d0712" />
+        <classShapeMoniker Id="3333efb2-b6e9-4ad4-9350-f786e59427f1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="56c39bab-1c2d-415c-a914-d316566b3ea8" absoluteBounds="9.375, 6.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CoadDataContext/DeviceGroupDependency" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5428f29c-d6f1-4667-8a4a-cfb4f4217578" absoluteBounds="9.39, 7.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ca24cfd2-e17e-43b7-ad56-dc2fc9e448c7" absoluteBounds="0.5, 4.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CoadDataContext/DeviceParam" />
+      <nestedChildShapes>
+        <elementListCompartment Id="782e81d7-260e-402b-94b9-224c56a4e519" absoluteBounds="0.515, 4.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.3125 : 2.84780110677083); (2.3125 : 4.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CoadDataContext/TypeParam/TypeParam_DeviceParam" />
+      <nodes>
+        <classShapeMoniker Id="ba0f3274-74a4-4287-bc6d-391aefe165f6" />
+        <classShapeMoniker Id="ca24cfd2-e17e-43b7-ad56-dc2fc9e448c7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d4bc051e-09ef-4126-9bcf-3d1fee21d474" absoluteBounds="0.75, 7, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CoadDataContext/DeviceEvent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b306dcfe-5926-40c1-8ec1-96c66b054cda" absoluteBounds="0.76500000000000012, 7.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="339d16c2-a157-46dd-b15e-8d33bfa0e5f2" absoluteBounds="4.25, 3.5, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/CoadDataContext/ClientDevice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a6c2ac5b-fecf-4613-8db2-724dee0b2ac6" absoluteBounds="4.265, 3.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.25 : 4.81814697265625); (2.5 : 4.81814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CoadDataContext/ClientDevice/ClientDevice_DeviceParam" />
+      <nodes>
+        <classShapeMoniker Id="339d16c2-a157-46dd-b15e-8d33bfa0e5f2" />
+        <classShapeMoniker Id="ca24cfd2-e17e-43b7-ad56-dc2fc9e448c7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.25 : 5.99924967447917); (2.65625 : 5.99924967447917); (2.65625 : 7)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CoadDataContext/ClientDevice/ClientDevice_DeviceEvent" />
+      <nodes>
+        <classShapeMoniker Id="339d16c2-a157-46dd-b15e-8d33bfa0e5f2" />
+        <classShapeMoniker Id="d4bc051e-09ef-4126-9bcf-3d1fee21d474" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.5 : 4.63544840494792); (6.25 : 4.63544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CoadDataContext/ClientServer/ClientServer_ClientDevice" />
+      <nodes>
+        <classShapeMoniker Id="db7159d7-7475-404d-bf33-e3265b6d0712" />
+        <classShapeMoniker Id="339d16c2-a157-46dd-b15e-8d33bfa0e5f2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="411ece59-8139-4ad9-a3b4-06cfa33d05b7" absoluteBounds="11.125, 3.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/CoadDataContext/ClientDeviceGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="96e1ba76-96f2-4648-bf97-5ab02c4ba380" absoluteBounds="11.14, 3.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(12.125 : 3.5); (12.125 : 1.76044840494792); (9.125 : 1.76044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CoadDataContext/ClientDeviceGroup/ClientDeviceGroup_DeviceGroupParam" />
+      <nodes>
+        <classShapeMoniker Id="411ece59-8139-4ad9-a3b4-06cfa33d05b7" />
+        <classShapeMoniker Id="3b350c52-9bfa-420a-a513-49b6e0ce866e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.125 : 3.59375); (6.25 : 3.59375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CoadDataContext/ClientDeviceGroup/ClientDeviceGroup_ClientDevice" />
+      <nodes>
+        <classShapeMoniker Id="411ece59-8139-4ad9-a3b4-06cfa33d05b7" />
+        <classShapeMoniker Id="339d16c2-a157-46dd-b15e-8d33bfa0e5f2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.5 : 4.60659912109375); (11.125 : 4.60659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CoadDataContext/ClientServer/ClientServer_ClientDeviceGroup" />
+      <nodes>
+        <classShapeMoniker Id="db7159d7-7475-404d-bf33-e3265b6d0712" />
+        <classShapeMoniker Id="411ece59-8139-4ad9-a3b4-06cfa33d05b7" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

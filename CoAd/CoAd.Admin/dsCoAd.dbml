@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="coad_test" Class="dsCoAdDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=newpc\sqlexpress;Initial Catalog=coad_test;User ID=sa" SettingsObjectName="CoAd.Admin.Properties.Settings" SettingsPropertyName="coad_testConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ClientDeviceGroup" Member="ClientDeviceGroup">
+    <Type Name="ClientDeviceGroup">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_server" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fo_id_group" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="state" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dateOfChange" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="ClientDeviceGroup_DeviceGroupParams" Member="DeviceGroupParams" ThisKey="id" OtherKey="id_group" Type="DeviceGroupParams" />
+      <Association Name="ClientDeviceGroup_ClientDevices" Member="ClientDevices" ThisKey="id" OtherKey="id_group" Type="ClientDevices" />
+      <Association Name="ClientServers_ClientDeviceGroup" Member="ClientServers" ThisKey="id_server" OtherKey="id" Type="ClientServers" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TypeParams" Member="TypeParams">
+    <Type Name="TypeParams">
+      <Column Name="id_type" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="mnem_param" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="object_str_param" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="type_param" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="unused" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="object_param" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TypeParams_DeviceGroupParams" Member="DeviceGroupParams" ThisKey="id_type" OtherKey="id_type" Type="DeviceGroupParams" />
+      <Association Name="TypeParams_DeviceParams" Member="DeviceParams" ThisKey="id_type" OtherKey="id_type" Type="DeviceParams" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientServers" Member="ClientServers">
+    <Type Name="ClientServers">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="identifier" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="configuration" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ClientServers_ClientDeviceGroup" Member="ClientDeviceGroup" ThisKey="id" OtherKey="id_server" Type="ClientDeviceGroup" />
+      <Association Name="ClientServers_ClientStores" Member="ClientStores" ThisKey="id" OtherKey="id_server" Type="ClientStores" />
+      <Association Name="ClientServers_ClientDevices" Member="ClientDevices" ThisKey="id" OtherKey="id_server" Type="ClientDevices" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientStores" Member="ClientStores">
+    <Type Name="ClientStores">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_server" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fo_id_store" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="egais_props" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ofd_props" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="bpa_props" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="state" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dateOfChange" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="ClientServers_ClientStores" Member="ClientServers" ThisKey="id_server" OtherKey="id" Type="ClientServers" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeviceEvent" Member="DeviceEvent">
+    <Type Name="DeviceEvent">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_device" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="ClientDevices_DeviceEvent" Member="ClientDevices" ThisKey="id_device" OtherKey="id" Type="ClientDevices" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeviceGroupDependency" Member="DeviceGroupDependency">
+    <Type Name="DeviceGroupDependency">
+      <Column Name="id_primary_group" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_secondary_group" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeviceGroupParams" Member="DeviceGroupParams">
+    <Type Name="DeviceGroupParams">
+      <Column Name="id_type" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_group" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="state" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dateOfChange" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="TypeParams_DeviceGroupParams" Member="TypeParams" ThisKey="id_type" OtherKey="id_type" Type="TypeParams" IsForeignKey="true" />
+      <Association Name="ClientDeviceGroup_DeviceGroupParams" Member="ClientDeviceGroup" ThisKey="id_group" OtherKey="id" Type="ClientDeviceGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeviceParams" Member="DeviceParams">
+    <Type Name="DeviceParams">
+      <Column Name="id_device" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_type" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="value" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="TypeParams_DeviceParams" Member="TypeParams" ThisKey="id_type" OtherKey="id_type" Type="TypeParams" IsForeignKey="true" />
+      <Association Name="ClientDevices_DeviceParams" Member="ClientDevices" ThisKey="id_device" OtherKey="id" Type="ClientDevices" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientDevices" Member="ClientDevices">
+    <Type Name="ClientDevices">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_server" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fo_id_device" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="type_device" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_group" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="data" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="settings" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="state" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dateOfChange" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="ClientDevices_DeviceEvent" Member="DeviceEvent" ThisKey="id" OtherKey="id_device" Type="DeviceEvent" />
+      <Association Name="ClientDevices_DeviceParams" Member="DeviceParams" ThisKey="id" OtherKey="id_device" Type="DeviceParams" />
+      <Association Name="ClientServers_ClientDevices" Member="ClientServers" ThisKey="id_server" OtherKey="id" Type="ClientServers" IsForeignKey="true" />
+      <Association Name="ClientDeviceGroup_ClientDevices" Member="ClientDeviceGroup" ThisKey="id_group" OtherKey="id" Type="ClientDeviceGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

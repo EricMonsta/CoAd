@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.875, 9.875" name="Frontdk">
+  <DataContextMoniker Name="/FrontdkDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4d554743-b5e3-45a7-896e-3c62ff195adf" absoluteBounds="6.125, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/FrontdkDataContext/Group_device" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1f2cf679-fab4-4ee7-9420-8b2a186c87c4" absoluteBounds="6.14, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="93031701-bf52-460e-8501-cee3b6909048" absoluteBounds="6.375, 2.375, 2, 6.7707340494791657">
+      <DataClassMoniker Name="/FrontdkDataContext/Device" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e265909-f1db-478e-a509-91a9690a8bf4" absoluteBounds="6.39, 2.835, 1.9700000000000002, 6.2107340494791661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.08423076923077 : 9.14573404947917); (7.08423076923077 : 9.39573404947917); (7.67961538461539 : 9.39573404947917); (7.67961538461539 : 9.14573404947917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FrontdkDataContext/Device/Device_Device" />
+      <nodes>
+        <classShapeMoniker Id="93031701-bf52-460e-8501-cee3b6909048" />
+        <classShapeMoniker Id="93031701-bf52-460e-8501-cee3b6909048" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2b3bba2b-eb16-41e0-a072-667b8fc97508" absoluteBounds="2, 4.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/FrontdkDataContext/Str_cash_param" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d4bfb88f-e0c7-4fae-a9a7-f2dd757d49ba" absoluteBounds="2.015, 4.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="650a5627-3bf9-49bd-9090-e26043415a70" absoluteBounds="10.625, 2, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/FrontdkDataContext/Cash_param" />
+      <nestedChildShapes>
+        <elementListCompartment Id="41a24907-dcd8-483a-85cc-02dbcb6a0a30" absoluteBounds="10.64, 2.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.125 : 1.2499995); (11.625 : 1.2499995); (11.625 : 2)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FrontdkDataContext/Group_device/Group_device_Cash_param" />
+      <nodes>
+        <classShapeMoniker Id="4d554743-b5e3-45a7-896e-3c62ff195adf" />
+        <classShapeMoniker Id="650a5627-3bf9-49bd-9090-e26043415a70" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4 : 5.57774983723958); (6.125 : 5.57774983723958); (6.125 : 2.32859537760417); (8.375 : 2.32859537760417); (8.375 : 2.125); (10.375 : 2.125); (10.375 : 4.02089680989583); (11.625 : 4.02089680989583); (11.625 : 3.77089680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FrontdkDataContext/Str_cash_param/Str_cash_param_Cash_param" />
+      <nodes>
+        <classShapeMoniker Id="2b3bba2b-eb16-41e0-a072-667b8fc97508" />
+        <classShapeMoniker Id="650a5627-3bf9-49bd-9090-e26043415a70" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3f8b19ea-e2ac-4eab-83a7-8c65476e31d2" absoluteBounds="2.5, 0.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/FrontdkDataContext/Classif_depart" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f5d57290-dad6-487d-9ba7-2cbce8c18a1f" absoluteBounds="2.515, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.20923076923077 : 3.2901025390625); (3.20923076923077 : 3.5401025390625); (3.80461538461539 : 3.5401025390625); (3.80461538461539 : 3.2901025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FrontdkDataContext/Classif_depart/Classif_depart_Classif_depart" />
+      <nodes>
+        <classShapeMoniker Id="3f8b19ea-e2ac-4eab-83a7-8c65476e31d2" />
+        <classShapeMoniker Id="3f8b19ea-e2ac-4eab-83a7-8c65476e31d2" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

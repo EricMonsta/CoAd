@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="frontdk_stand_test" Class="FrontdkDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SSB-SERMAN\SQLEXPRESS;Initial Catalog=frontdk_stand_test;Integrated Security=True" SettingsObjectName="CoAd.Fo.Core.Properties.Settings" SettingsPropertyName="frontdk_stand_testConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Group_devices" Member="Group_devices">
+    <Type Name="Group_device">
+      <Column Name="id_group_devices" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name_group_devices" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="max_tran_rec" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="keyboard_card" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Group_device_Cash_param" Member="Cash_params" ThisKey="id_group_devices" OtherKey="id_group_devices" Type="Cash_param" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Devices" Member="Devices">
+    <Type Name="Device">
+      <Column Name="id_device" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SHOPINDEX" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_type_device" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="name_device" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="host_device" Type="System.String" DbType="VarChar(900) NOT NULL" CanBeNull="false" />
+      <Column Name="state_device" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dataReady" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="max_tran_rec" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ok_accept_data" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="num_device" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_model" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_group_devices" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="host_server" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="need_reinit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="is_local_device" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="is_loadable" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="is_batch_mode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name_db" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="emailAddress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="price_diff" Type="System.Decimal" DbType="Decimal(19,2)" CanBeNull="true" />
+      <Column Name="user_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="num_depart_default" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="upd_state" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="upd_message" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="version" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="id_cash_device" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="last_load_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="id_parent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="counter" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="restart_flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Device_Device" Member="Devices" ThisKey="id_device" OtherKey="id_parent" Type="Device" />
+      <Association Name="Device_Device" Member="Device1" ThisKey="id_parent" OtherKey="id_device" Type="Device" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Str_cash_params" Member="Str_cash_params">
+    <Type Name="Str_cash_param">
+      <Column Name="id_str_cash_param" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_str_cash_param" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="mnem_str_cash_param" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="type_param" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="unused" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Str_cash_param_Cash_param" Member="Cash_params" ThisKey="id_str_cash_param" OtherKey="id_str_cash_param" Type="Cash_param" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cash_params" Member="Cash_params">
+    <Type Name="Cash_param">
+      <Column Name="value_param" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="id_group_devices" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_str_cash_param" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="value_blob" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="state" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Group_device_Cash_param" Member="Group_device" ThisKey="id_group_devices" OtherKey="id_group_devices" Type="Group_device" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Str_cash_param_Cash_param" Member="Str_cash_param" ThisKey="id_str_cash_param" OtherKey="id_str_cash_param" Type="Str_cash_param" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Classif_depart" Member="Classif_departs">
+    <Type Name="Classif_depart">
+      <Column Name="id_depart" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_parent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="name_depart" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="num_depart" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bo_number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="client_id" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="egais_prop" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ofd_prop" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="bpa_prop" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Association Name="Classif_depart_Classif_depart" Member="Classif_departs" ThisKey="id_depart" OtherKey="id_parent" Type="Classif_depart" />
+      <Association Name="Classif_depart_Classif_depart" Member="Classif_depart1" ThisKey="id_parent" OtherKey="id_depart" Type="Classif_depart" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
